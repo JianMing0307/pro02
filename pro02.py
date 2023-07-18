@@ -1,9 +1,20 @@
 import streamlit as st
 import joblib
+from pathlib import Path
+
+current_dir = Path(__file__).resolve().parent
+file_path = current_dir / "WebApp" / "knn_clf.joblib"
+
+
+
+
+
+
+
 
 #仔入並還原模型
 knn_clf = joblib.load("WebApp/knn_clf.joblib")
-knn_clf.metric = 'euclidean'  # 或者 'manhattan'
+
 svm_clf = joblib.load("WebApp/svm_clf.joblib")
 rf_clf = joblib.load("WebApp/rf_clf.joblib")
 
