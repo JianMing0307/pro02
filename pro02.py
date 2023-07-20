@@ -7,7 +7,7 @@ import joblib
 
 
 
-#仔入並還原模型
+#載入並還原模型
 knn_clf = joblib.load("knn_clf.joblib")
 
 svm_clf = joblib.load("svm_clf.joblib")
