@@ -8,10 +8,10 @@ import joblib
 
 
 #載入並還原模型
-knn_clf = joblib.load("knn_clf.joblib")
+knn_clf = joblib.load("clf1.joblib")
 
-svm_clf = joblib.load("svm_clf.joblib")
-rf_clf = joblib.load("rf_clf.joblib")
+svm_clf = joblib.load("clf3.joblib")
+rf_clf = joblib.load("clf2.joblib")
 
 
 st.title("IRIS品種預測")
