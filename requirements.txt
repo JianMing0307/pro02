@@ -1,5 +1,5 @@
 joblib==1.2.0
-streamlit==0.89.0
+streamlit==1.24.1
 pip==23.2
 pandas==2.0.3
 numpy==1.24.2
