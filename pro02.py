@@ -1,10 +1,5 @@
 import streamlit as st
 import joblib
-from pathlib import Path
-
-current_dir = Path(__file__).resolve().parent
-file_path = current_dir / "WebApp" / "knn_clf.joblib"
-
 
 
 
