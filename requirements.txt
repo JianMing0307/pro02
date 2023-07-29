@@ -7,5 +7,5 @@ pandas==2.0.3
 sklearn==0.0.post5
 GitPython==3.1.31
 gitdb==4.0.10
-importlib-metadata    6.7.0
+importlib-metadata==6.7.0
 
