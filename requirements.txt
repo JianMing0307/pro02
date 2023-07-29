@@ -6,4 +6,4 @@ GitPython==3.1.31
 gitdb==4.0.10
 importlib-metadata==6.7.0
 conda-build==3.22.0
-Python==3.9.13
+Python==3.4
