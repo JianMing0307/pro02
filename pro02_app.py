@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-gatherUsageStats = false
+
 
 #仔入並還原模型
 knn_clf = joblib.load("knn_clf.joblib")
