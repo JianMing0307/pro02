@@ -1,6 +1,5 @@
 import streamlit as st
 import joblib
-[browser]
 gatherUsageStats = false
 
 #仔入並還原模型
