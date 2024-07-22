@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Form 網頁</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; /* 防止頁面滾動 */
+            position: relative; /* 為了底部區域的絕對定位 */
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100% - 50px); /* 調整 iframe 的高度以顯示按鈕 */
+            border: none;
+            margin: 0; /* 移除 iframe 頂端的 margin */
+            padding: 0; /* 移除 iframe 頂端的 padding */
+            box-sizing: border-box; /* 包括 padding 在內 */
+        }
+
+        .buttons {
+            position: absolute; /* 絕對定位 */
+            bottom: 0; /* 固定在頁面底部 */
+            width: 100%; /* 寬度為 100% */
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 0; /* 調整 padding */
+            background-color: #f0f0f0; /* 可選的背景色，使按鈕區域更明顯 */
+            z-index: 10; /* 確保按鈕在 iframe 上方 */
+        }
+
+        .buttons button {
+            padding: 15px 30px; /* 放大按鈕 */
+            font-size: 20px; /* 放大字體 */
+            font-weight: bold; /* 加粗字體 */
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #8CD1CB; /* 預設其他按鈕的顏色 */
+            color: black;
+        }
+
+        .buttons button:first-child {
+            background-color: #D8D82B; /* "回表單首頁"的顏色 */
+            color: black; /* 使文字在黃色背景上更清晰 */
+        }
+
+        .buttons button:hover {
+            opacity: 0.8; /* 應用 hover 效果，所有按鈕都適用 */
+        }
+
+        .footer {
+            display: none; /* 隱藏 footer 區域 */
+        }
+
+        .mask {
+            position: absolute;
+            bottom: 2 cm; /* 距離頁面底部 3 公分 */
+            width: 100%;
+            height: 2.5cm; /* 遮罩的高度，可以根據需要調整 */
+            background-color: #f0f0f0;
+            z-index: 9; /* 確保遮罩在按鈕區域下方 */
+        }
+    </style>
+</head>
+<body>
+    <iframe id="contentFrame" src="https://forms.office.com/r/KxSW72pJFT" onload="scrollToTop()"></iframe>
+    <div class="buttons">
+        <button onclick="showForm()">回表單首頁</button>
+        <button onclick="showVideo()">觀看公司影片</button>
+        <button onclick="show360()">辦公室環景介紹</button>
+    </div>
+    <div class="footer">
+        <p>Microsoft 365 以下的文字</p>
+    </div>
+    <div class="mask"></div>
+    <script>
+        function showForm() {
+            document.getElementById('contentFrame').src = "https://forms.office.com/r/KxSW72pJFT";
+        }
+
+        function showVideo() {
+            document.getElementById('contentFrame').src = "https://www.youtube.com/embed/X9yETYCQeqU";
+        }
+
+        function show360() {
+            document.getElementById('contentFrame').src = "https://360theredmarker.com/vt/journey/";
+        }
+
+        function scrollToTop() {
+            document.getElementById('contentFrame').contentWindow.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
